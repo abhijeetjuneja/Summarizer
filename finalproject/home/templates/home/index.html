@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel='stylesheet'href="{% static 'home/css/bootstrap.min.css' %}" type='text/css'/>
+</head>
+<body background="/static/home/img/bg.jpg">
+<center><h1><font color="white" >SummarizeIt.com !</font></h1></center>
+<center>
+<table>
+<form name="myform" action="result/" method="post">{% csrf_token %}
+  <div class="form-group">
+    <tr>
+        <td>
+            <center><label for="abc"><font color="white" >Input Text :</font> </label></center></td>
+
+    <td><font color="black"><textarea name="input_text" rows="5"cols="50"class="form-group" id="abc" placeholder="Text input" >
+    </textarea></font></td>
+  </div>
+</tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td></td><td><br><center><button type="submit" class="btn btn-default"> Generate Summary !</button></center></td></tr>
+</form>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    {% load staticfiles %}
+    <link rel='stylesheet'href="{% static 'home/css/bootstrap.min.css' %}" type='text/css'/>
+</head>
+<body background="/static/home/img/bg.jpg">
+<center><h1> <font color="white" >Summarizeit.com !</h1></center>
+
+<form name="myform" action="/index/" method="post">{% csrf_token %}
+    <br><br><center><button type="submit" class="btn btn-default">Different text? Click here to Generate again</button>
+</form>
+<br><br>
+<center><h1> <font color="white" >Your Summary!</h1></center>
+<br>
+<p>{{output}}</p>
+</body>
+</html>
